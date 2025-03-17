@@ -6,10 +6,10 @@ export default function About() {
         <h1 className="text-4xl font-bold mb-8">About MAHAAR Treasury Solutions</h1>
         <div className="prose max-w-none">
           <p className="text-lg text-gray-600 mb-6">
-            Founded in 2024, Mahaar Treasury Solutions emerged from a vision to bridge the gap between traditional treasury management and the burgeoning world of Bitcoin. We recognized that enterprises needed expert guidance to navigate the complexities of Bitcoin integration into their treasury operations.
+            Founded in 2024, MAHAAR Treasury Solutions emerged from a vision to bridge the gap between traditional treasury management and the burgeoning world of Bitcoin. We recognized that enterprises needed expert guidance to navigate the complexities of Bitcoin integration into their treasury operations.
           </p>
           <p className="text-lg text-gray-600">
-            Our team combines decades of treasury management experience with deep expertise in Bitcoin and digital assets. We've helped numerous companies successfully implement Bitcoin strategies that align with their business objectives while maintaining robust risk management practices.
+            Our team combines decades of treasury management experience with deep expertise in Bitcoin and digital assets. We&apos;ve helped numerous companies successfully implement Bitcoin strategies that align with their business objectives while maintaining robust risk management practices.
           </p>
         </div>
       </section>
