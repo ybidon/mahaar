@@ -17,8 +17,8 @@ export default function Navbar() {
             />
           </Link>
           <div className="flex space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-[#0f1240]">
-              Home
+            <Link href="/research" className="text-gray-700 hover:text-[#0f1240]">
+              Research
             </Link>
             <Link href="/about" className="text-gray-700 hover:text-[#0f1240]">
               About
