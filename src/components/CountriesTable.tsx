@@ -73,32 +73,20 @@ export default function CountriesTable() {
     <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-50">
-          <tr>
-            <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Country</th>
-            <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Flag</th>
-            <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Filings & Sources</th>
-            <th className="px-4 py-2 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"># of BTC</th>
-            <th className="px-4 py-2 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Value Today</th>
-            <th className="px-4 py-2 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">% of 21m</th>
+          <tr className="bg-gray-50">
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Country</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bitcoin Holdings</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Value (USD)</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">% of Reserves</th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
-          {countries.map((country, index) => (
-            <tr key={index} className="hover:bg-gray-50">
-              <td className="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">{country.country}</td>
-              <td className="px-4 py-2 whitespace-nowrap">
-                <Image
-                  src={`https://flagcdn.com/24x18/${country.flag}.png`}
-                  alt={`${country.country} flag`}
-                  width={24}
-                  height={18}
-                  className="rounded-sm"
-                />
-              </td>
-              <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-500">{country.sources}</td>
-              <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-900 text-right">{country.BTC.toLocaleString()}</td>
-              <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-900 text-right">${(country.value / 1000000000).toFixed(2)}B</td>
-              <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-900 text-right">{country.percentage}%</td>
+          {countries.map((country) => (
+            <tr key={country.country} className="hover:bg-gray-50">
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{country.country}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{country.BTC.toLocaleString()}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${(country.value / 1000000000).toFixed(2)}B</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{country.percentage}%</td>
             </tr>
           ))}
         </tbody>

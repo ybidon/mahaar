@@ -53,7 +53,17 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 px-4">
+      <div className="mb-8 px-4">
+        <h2 className="text-2xl font-bold text-gray-900">Top Bitcoin Holders amongst Public Companies</h2>
+      </div>
+      <BitcoinHoldersTable />
+      
+      <div className="mt-16 mb-8 px-4">
+        <h2 className="text-2xl font-bold text-gray-900">Top Bitcoin Holders amongst Countries</h2>
+      </div>
+      <CountriesTable />
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 px-4 mt-24">
         <Link href="/about" className="group">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <h2 className="text-xl font-semibold mb-2">About Us</h2>
@@ -73,16 +83,6 @@ export default function Home() {
           </div>
         </Link>
       </div>
-
-      <div className="mb-8 px-4">
-        <h2 className="text-2xl font-bold text-gray-900">Top Bitcoin Holders amongst Public Companies</h2>
-      </div>
-      <BitcoinHoldersTable />
-      
-      <div className="mt-16 mb-8 px-4">
-        <h2 className="text-2xl font-bold text-gray-900">Top Bitcoin Holders amongst Countries</h2>
-      </div>
-      <CountriesTable />
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 text-center mx-4 my-16">
