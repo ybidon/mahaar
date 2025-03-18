@@ -22,13 +22,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         <main className="pt-16">{children}</main>
-        <footer className="bg-gray-800 text-white py-8">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center">
-              <p>&copy; {new Date().getFullYear()} MAHAAR Treasury Solutions. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
       </body>
     </html>
   );

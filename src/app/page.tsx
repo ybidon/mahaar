@@ -53,12 +53,12 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="mb-8 px-4">
+      <div className="mb-8 px-4 text-center">
         <h2 className="text-2xl font-bold text-gray-900">Top Bitcoin Holders amongst Public Companies</h2>
       </div>
       <BitcoinHoldersTable />
       
-      <div className="mt-16 mb-8 px-4">
+      <div className="mt-16 mb-8 px-4 text-center">
         <h2 className="text-2xl font-bold text-gray-900">Top Bitcoin Holders amongst Countries</h2>
       </div>
       <CountriesTable />
@@ -85,7 +85,7 @@ export default function Home() {
       </div>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 text-center mx-4 my-16">
+      <section className="bg-gradient-to-r from-[#0f1240] to-[#1a1f5c] p-12 text-center mt-16">
         <h2 className="text-3xl font-bold text-white mb-4">
           Ready to Transform Your Treasury?
         </h2>
@@ -94,7 +94,7 @@ export default function Home() {
         </p>
         <Link
           href="/contact"
-          className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+          className="inline-block bg-white text-[#0f1240] px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
         >
           Contact Us
         </Link>

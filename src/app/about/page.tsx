@@ -40,30 +40,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* Team Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold">John Doe</h3>
-              <p className="text-gray-600">CEO & Founder</p>
-            </div>
-            <div className="text-center">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold">Jane Smith</h3>
-              <p className="text-gray-600">Head of Strategy</p>
-            </div>
-            <div className="text-center">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold">Mike Johnson</h3>
-              <p className="text-gray-600">Technical Director</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 } 
