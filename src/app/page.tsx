@@ -2,26 +2,48 @@ import Link from "next/link";
 import Image from "next/image";
 import BitcoinHoldersTable from '@/components/BitcoinHoldersTable';
 import CountriesTable from '@/components/CountriesTable';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Home - Mahaar',
+};
 
 export default function Home() {
   return (
     <div className="bg-gray-100">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#0f1240] to-[#1a1f5c] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold mb-6">
-              Transform Your Treasury with Bitcoin
-            </h1>
-            <p className="text-xl mb-8">
-              Strategic Bitcoin solutions for forward-thinking enterprises
-            </p>
-            <Link
-              href="/contact"
-              className="bg-white text-[#0f1240] px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
-            >
-              Get Started
-            </Link>
+      <section className="relative h-[70vh] bg-black">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/divers.jpg"
+            alt="DIFC"
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="100vw"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 h-full flex items-center">
+          <div className="max-w-7xl mx-auto px-4 w-full">
+            <div className="text-center">
+              <h1 className="text-6xl font-bold mb-6 text-white">
+                Transform Your Treasury with Bitcoin
+              </h1>
+              <p className="text-2xl mb-8 text-white/90">
+                Strategic Bitcoin solutions for forward-thinking enterprises
+              </p>
+              <Link
+                href="/contact"
+                className="bg-white text-[#0f1240] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors text-lg"
+              >
+                Get Started
+              </Link>
+            </div>
           </div>
         </div>
       </section>

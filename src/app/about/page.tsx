@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'About - Mahaar',
+};
+
 export default function About() {
   return (
     <div className="py-20">

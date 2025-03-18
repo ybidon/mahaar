@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Research - Mahaar',
+};
+
 export default function ResearchPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-24">
