@@ -31,8 +31,8 @@ export default function Home() {
         <div className="relative z-10 h-full flex items-center">
           <div className="max-w-7xl mx-auto px-4 w-full">
             <div className="text-center">
-              <h1 className="text-6xl font-bold mb-6 text-white">
-                Transform Your Treasury with Bitcoin
+              <h1 className="text-5xl font-bold mb-6 text-white tracking-tight">
+                Leap Ahead — Secure Your Treasury with Bitcoin
               </h1>
               <p className="text-2xl mb-8 text-white/90">
                 Strategic Bitcoin solutions for forward-thinking enterprises
@@ -62,7 +62,7 @@ export default function Home() {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Implementation</h3>
               <p className="text-gray-600">
-                Seamless integration of Bitcoin into your existing treasury operations
+                Seamless integration into a network of brokers, liquidity providers and OTC desks
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -76,12 +76,14 @@ export default function Home() {
       </section>
 
       <div className="mb-8 px-4 text-center">
-        <h2 className="text-2xl font-bold text-gray-900">Top Bitcoin Holders amongst Public Companies</h2>
+        <h2 className="text-2xl font-bold text-gray-900">Top Bitcoin Holders Amongst Public Companies</h2>
+        <p className="text-sm text-gray-500 mt-1">As of 03/2025</p>
       </div>
       <BitcoinHoldersTable />
       
       <div className="mt-16 mb-8 px-4 text-center">
-        <h2 className="text-2xl font-bold text-gray-900">Top Bitcoin Holders amongst Countries</h2>
+        <h2 className="text-2xl font-bold text-gray-900">Top Bitcoin Holders Amongst Countries</h2>
+        <p className="text-sm text-gray-500 mt-1">As of 03/2025</p>
       </div>
       <CountriesTable />
 
