@@ -20,18 +20,21 @@ export default function About() {
             </p>
           </div>
 
+          {/* Divider */}
+          <div className="border-t border-gray-200"></div>
+
           {/* Bullet Points */}
-          <div className="space-y-6">
-            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Institutional-grade custody solutions with multi-signature security protocols</p>
-            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Comprehensive risk assessment and mitigation strategies</p>
-            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Strategic Bitcoin acquisition and treasury management</p>
-            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Regulatory compliance and reporting frameworks</p>
-            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Integration with existing treasury systems</p>
-            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> 24/7 monitoring and risk management</p>
-            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Custom reporting and analytics dashboard</p>
-            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Emergency response and recovery procedures</p>
-            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Regular security audits and compliance checks</p>
-            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Dedicated support team and training programs</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Seamless integration into a network of brokers, liquidity providers</p>
+              <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Custom Bitcoin treasury strategies tailored to your business needs</p>
+              <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Institutional-grade custody solutions with multi-signature security</p>
+            </div>
+            <div className="space-y-6">
+              <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Comprehensive risk assessment and mitigation strategies</p>
+              <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> 24/7 monitoring and risk management</p>
+              <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Dedicated support team and training programs</p>
+            </div>
           </div>
         </div>
       </section>
