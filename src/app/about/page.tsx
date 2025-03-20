@@ -7,41 +7,60 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <div className="py-20">
-      {/* Company Story */}
       <section className="max-w-7xl mx-auto px-4 mb-20">
-        <h1 className="text-4xl font-bold mb-8">About MAHAAR Treasury Solutions</h1>
-        <div className="prose max-w-none">
-          <p className="text-lg text-gray-600 mb-6">
-            Founded in 2024, MAHAAR Treasury Solutions emerged from a vision to bridge the gap between traditional treasury management and the burgeoning world of Bitcoin. We recognized that enterprises needed expert guidance to navigate the complexities of Bitcoin integration into their treasury operations.
-          </p>
-          <p className="text-lg text-gray-600">
-            Our team combines decades of treasury management experience with deep expertise in Bitcoin and digital assets. We&apos;ve helped numerous companies successfully implement Bitcoin strategies that align with their business objectives while maintaining robust risk management practices.
-          </p>
-        </div>
-      </section>
+        <h1 className="text-4xl font-bold mb-8 text-center">About MAHAAR Treasury Solutions</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Left Column */}
+          <div className="prose max-w-none">
+            <p className="text-base text-gray-600 mb-8 leading-relaxed text-justify">
+              MAHAAR Treasury Solutions is a Middle East-based advisory firm driving Bitcoin adoption in the region. Established in 2024, we help enterprises integrate Bitcoin into their treasury operations securely, compliantly, and efficiently.
+            </p>
+            <p className="text-base text-gray-600 leading-relaxed text-justify">
+              Our team brings expertise in Bitcoin, financial strategy, and risk management, with experience in crypto investment firms and family offices. Backed by a strong network across brokers, liquidity providers, and custodians, we provide the insight and infrastructure needed for seamless execution and institutional-grade solutions.
+            </p>
+          </div>
 
-      {/* Mission & Values */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Mission & Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <h3 className="text-xl font-semibold mb-4">Innovation</h3>
-              <p className="text-gray-600">
-                Pushing the boundaries of treasury management through cutting-edge Bitcoin solutions
-              </p>
+          {/* Right Column */}
+          <div className="space-y-6">
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">1</div>
+              <p className="text-gray-600">Strategic Bitcoin treasury integration</p>
             </div>
-            <div className="text-center">
-              <h3 className="text-xl font-semibold mb-4">Trust</h3>
-              <p className="text-gray-600">
-                Building lasting relationships through transparency and reliable expertise
-              </p>
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">2</div>
+              <p className="text-gray-600">Institutional-grade custody solutions</p>
             </div>
-            <div className="text-center">
-              <h3 className="text-xl font-semibold mb-4">Excellence</h3>
-              <p className="text-gray-600">
-                Delivering exceptional results through meticulous attention to detail
-              </p>
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">3</div>
+              <p className="text-gray-600">Risk management and compliance</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">4</div>
+              <p className="text-gray-600">OTC trading and liquidity access</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">5</div>
+              <p className="text-gray-600">Portfolio optimization strategies</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">6</div>
+              <p className="text-gray-600">Market analysis and research</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">7</div>
+              <p className="text-gray-600">Regulatory compliance guidance</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">8</div>
+              <p className="text-gray-600">Technology infrastructure setup</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">9</div>
+              <p className="text-gray-600">Training and education programs</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">10</div>
+              <p className="text-gray-600">24/7 operational support</p>
             </div>
           </div>
         </div>
