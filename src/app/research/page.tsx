@@ -16,21 +16,22 @@ export default function ResearchPage() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Example PDF card - you can add more cards for different PDFs */}
+          {/* Bitcoin Whitepaper */}
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
             <div className="flex items-center mb-4">
-              <svg className="w-8 h-8 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 text-[#0f1240] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
-              <h3 className="text-lg font-semibold text-gray-900">Research Paper Title</h3>
+              <h3 className="text-lg font-semibold text-gray-900">Bitcoin Whitepaper</h3>
             </div>
             <p className="text-gray-600 mb-4">
-              Brief description of the research paper and its key findings.
+              The original Bitcoin whitepaper by Satoshi Nakamoto, published in 2008.
             </p>
             <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-500">Published: January 2024</span>
+              <span className="text-sm text-gray-500">Published: October 2008</span>
               <a
-                href="#"
+                href="/simpledoc.pdf"
+                download="Bitcoin_Whitepaper.pdf"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#0f1240] hover:bg-[#1a1f5c]"
               >
                 Download PDF
