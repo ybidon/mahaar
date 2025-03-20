@@ -7,61 +7,31 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <div className="py-20">
-      <section className="max-w-7xl mx-auto px-4 mb-20">
-        <h1 className="text-4xl font-bold mb-8 text-center">About MAHAAR Treasury Solutions</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Left Column */}
+      <section className="max-w-7xl mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-12 text-center">About MAHAAR Treasury Solutions</h1>
+        <div className="space-y-12">
+          {/* Full Width Text */}
           <div className="prose max-w-none">
-            <p className="text-base text-gray-600 mb-8 leading-relaxed text-justify">
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed text-justify">
               MAHAAR Treasury Solutions is a Middle East-based advisory firm driving Bitcoin adoption in the region. Established in 2024, we help enterprises integrate Bitcoin into their treasury operations securely, compliantly, and efficiently.
             </p>
-            <p className="text-base text-gray-600 leading-relaxed text-justify">
+            <p className="text-lg text-gray-600 leading-relaxed text-justify">
               Our team brings expertise in Bitcoin, financial strategy, and risk management, with experience in crypto investment firms and family offices. Backed by a strong network across brokers, liquidity providers, and custodians, we provide the insight and infrastructure needed for seamless execution and institutional-grade solutions.
             </p>
           </div>
 
-          {/* Right Column */}
+          {/* Bullet Points */}
           <div className="space-y-6">
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">1</div>
-              <p className="text-gray-600">Strategic Bitcoin treasury integration</p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">2</div>
-              <p className="text-gray-600">Institutional-grade custody solutions</p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">3</div>
-              <p className="text-gray-600">Risk management and compliance</p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">4</div>
-              <p className="text-gray-600">OTC trading and liquidity access</p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">5</div>
-              <p className="text-gray-600">Portfolio optimization strategies</p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">6</div>
-              <p className="text-gray-600">Market analysis and research</p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">7</div>
-              <p className="text-gray-600">Regulatory compliance guidance</p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">8</div>
-              <p className="text-gray-600">Technology infrastructure setup</p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">9</div>
-              <p className="text-gray-600">Training and education programs</p>
-            </div>
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#0f1240] text-white flex items-center justify-center text-sm font-semibold">10</div>
-              <p className="text-gray-600">24/7 operational support</p>
-            </div>
+            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Institutional-grade custody solutions with multi-signature security protocols</p>
+            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Comprehensive risk assessment and mitigation strategies</p>
+            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Strategic Bitcoin acquisition and treasury management</p>
+            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Regulatory compliance and reporting frameworks</p>
+            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Integration with existing treasury systems</p>
+            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> 24/7 monitoring and risk management</p>
+            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Custom reporting and analytics dashboard</p>
+            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Emergency response and recovery procedures</p>
+            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Regular security audits and compliance checks</p>
+            <p className="text-lg text-gray-600"><span className="text-2xl text-[#0f1240]">•</span> Dedicated support team and training programs</p>
           </div>
         </div>
       </section>
