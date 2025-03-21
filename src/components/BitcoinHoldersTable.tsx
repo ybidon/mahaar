@@ -83,34 +83,24 @@ const holders: BitcoinHolder[] = [
 
 export default function BitcoinHoldersTable() {
   return (
-    <div className="max-w-3xl mx-auto">
-      <div className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
+    <div className="max-w-3xl mx-auto px-4">
+      <div className="bg-white rounded-lg shadow-md border border-gray-200 overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Entity</th>
-              <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Country</th>
-              <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"># of BTC</th>
-              <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Value Today</th>
-              <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">% of 21m</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Company</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bitcoin Holdings</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Value (USD)</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">% of Treasury</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
-            {holders.map((holder, index) => (
-              <tr key={index} className="hover:bg-gray-50">
-                <td className="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">{holder.entity}</td>
-                <td className="px-4 py-2 whitespace-nowrap">
-                  <Image
-                    src={`https://flagcdn.com/24x18/${holder.country.toLowerCase()}.png`}
-                    alt={`${holder.country} flag`}
-                    width={24}
-                    height={18}
-                    className="rounded-sm"
-                  />
-                </td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-500">{holder.btc.toLocaleString()}</td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-500">{holder.value}</td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-500">{holder.percentage}</td>
+          <tbody className="bg-white divide-y divide-gray-200">
+            {holders.map((holder) => (
+              <tr key={holder.entity} className="hover:bg-gray-50">
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{holder.entity}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{holder.btc.toLocaleString()}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{holder.value}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{holder.percentage}</td>
               </tr>
             ))}
           </tbody>
