@@ -14,7 +14,8 @@ export default function ResearchCard() {
     setError("");
 
     try {
-      const response = await fetch('/api/contact', {
+      // Try to send the email in the background
+      const emailResponse = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -27,20 +28,19 @@ export default function ResearchCard() {
         }),
       });
 
-      if (!response.ok) throw new Error('Failed to send email');
+      if (!emailResponse.ok) {
+        const errorData = await emailResponse.json();
+        console.error('Email error:', errorData);
+      }
 
-      // Trigger download
-      const link = document.createElement('a');
-      link.href = '/simpledoc.pdf';
-      link.download = 'bitcoin-whitepaper.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      // Trigger download immediately
+      window.location.href = '/api/download';
 
       setShowModal(false);
       setEmail("");
     } catch (err) {
-      setError("Failed to process download. Please try again.");
+      console.error('Download error:', err);
+      setError(err instanceof Error ? err.message : "Failed to process download. Please try again.");
     } finally {
       setIsSubmitting(false);
     }

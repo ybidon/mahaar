@@ -4,12 +4,11 @@ import nodemailer from 'nodemailer';
 export async function POST(request: Request) {
   try {
     const { name, email, company, message } = await request.json();
+    console.log('Received email request:', { name, email, company, message });
 
-    // Create a transporter using SMTP
+    // Create a transporter using Gmail
     const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
+      service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -19,8 +18,8 @@ export async function POST(request: Request) {
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'contact@mahaarsolutions.com',
-      subject: `New Contact Form Submission from ${name}`,
+      to: process.env.EMAIL_USER,
+      subject: `New PDF Download Request from ${email}`,
       text: `
 Name: ${name}
 Email: ${email}
@@ -30,7 +29,7 @@ Message:
 ${message}
       `,
       html: `
-<h2>New Contact Form Submission</h2>
+<h2>New PDF Download Request</h2>
 <p><strong>Name:</strong> ${name}</p>
 <p><strong>Email:</strong> ${email}</p>
 <p><strong>Company:</strong> ${company}</p>
@@ -40,13 +39,14 @@ ${message}
     };
 
     // Send email
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent:', info);
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Detailed email error:', error);
     return NextResponse.json(
-      { error: 'Failed to send message' },
+      { error: error instanceof Error ? error.message : 'Failed to send message' },
       { status: 500 }
     );
   }
