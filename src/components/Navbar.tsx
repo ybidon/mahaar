@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -8,16 +8,16 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full z-50 bg-[#0a0b1e]/80 backdrop-blur-md border-b border-blue-500/20">
+    <nav className="fixed w-full z-50 bg-[#0a0b1e]/90 backdrop-blur-md border-b border-blue-500/20">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.png"
               alt="MAHAAR Logo"
-              width={180}
-              height={90}
-              className="object-contain mt-8"
+              width={220}
+              height={110}
+              className="object-contain mt-8 -ml-8"
               priority
             />
           </Link>
@@ -26,25 +26,25 @@ export default function Navbar() {
           <div className="hidden md:flex space-x-8">
             <Link 
               href="/" 
-              className="text-blue-200 hover:text-white transition-colors duration-200"
+              className="text-[#f7ebbf] hover:text-white transition-colors duration-200"
             >
               Home
             </Link>
             <Link 
               href="/research" 
-              className="text-blue-200 hover:text-white transition-colors duration-200"
+              className="text-[#f7ebbf] hover:text-white transition-colors duration-200"
             >
               Research
             </Link>
             <Link 
               href="/about" 
-              className="text-blue-200 hover:text-white transition-colors duration-200"
+              className="text-[#f7ebbf] hover:text-white transition-colors duration-200"
             >
               About
             </Link>
             <Link 
               href="/contact" 
-              className="text-blue-200 hover:text-white transition-colors duration-200"
+              className="text-[#f7ebbf] hover:text-white transition-colors duration-200"
             >
               Contact
             </Link>
@@ -53,7 +53,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-blue-200 hover:text-white"
+            className="md:hidden text-[#f7ebbf] hover:text-white"
           >
             <svg
               className="w-6 h-6"
@@ -79,28 +79,28 @@ export default function Navbar() {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
                 href="/"
-                className="block px-3 py-2 text-blue-200 hover:text-white hover:bg-blue-500/10 rounded-md"
+                className="block px-3 py-2 text-[#f7ebbf] hover:text-white hover:bg-blue-500/10 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
-                href="/research"
-                className="block px-3 py-2 text-blue-200 hover:text-white hover:bg-blue-500/10 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Research
-              </Link>
-              <Link
                 href="/about"
-                className="block px-3 py-2 text-blue-200 hover:text-white hover:bg-blue-500/10 rounded-md"
+                className="block px-3 py-2 text-[#f7ebbf] hover:text-white hover:bg-blue-500/10 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link
+                href="/research"
+                className="block px-3 py-2 text-[#f7ebbf] hover:text-white hover:bg-blue-500/10 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Research
+              </Link>
+              <Link
                 href="/contact"
-                className="block px-3 py-2 text-blue-200 hover:text-white hover:bg-blue-500/10 rounded-md"
+                className="block px-3 py-2 text-[#f7ebbf] hover:text-white hover:bg-blue-500/10 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
