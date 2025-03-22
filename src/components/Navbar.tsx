@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full z-50 bg-[#0a0b1e]/90 backdrop-blur-md border-b border-blue-500/20">
+    <nav className="fixed w-full z-50 bg-[#0a0b1e]/90 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center">
@@ -17,7 +17,7 @@ export default function Navbar() {
               alt="MAHAAR Logo"
               width={220}
               height={110}
-              className="object-contain mt-8 -ml-8"
+              className="object-contain mt-10 -ml-8"
               priority
             />
           </Link>
@@ -26,25 +26,25 @@ export default function Navbar() {
           <div className="hidden md:flex space-x-8">
             <Link 
               href="/" 
-              className="text-[#f7ebbf] hover:text-white transition-colors duration-200"
+              className="text-[#cececf] hover:text-white transition-colors duration-200"
             >
               Home
             </Link>
             <Link 
               href="/research" 
-              className="text-[#f7ebbf] hover:text-white transition-colors duration-200"
+              className="text-[#cececf] hover:text-white transition-colors duration-200"
             >
               Research
             </Link>
             <Link 
               href="/about" 
-              className="text-[#f7ebbf] hover:text-white transition-colors duration-200"
+              className="text-[#cececf] hover:text-white transition-colors duration-200"
             >
               About
             </Link>
             <Link 
               href="/contact" 
-              className="text-[#f7ebbf] hover:text-white transition-colors duration-200"
+              className="text-[#cececf] hover:text-white transition-colors duration-200"
             >
               Contact
             </Link>

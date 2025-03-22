@@ -62,7 +62,7 @@ export default function ResearchCard() {
           <span className="text-sm text-gray-500">Published: October 2008</span>
           <button
             onClick={() => setShowModal(true)}
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#0f1240] hover:bg-[#1a1f5c]"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#0a0b1e]/90 hover:bg-[#0a0b1e]"
           >
             Download PDF
           </button>
@@ -103,7 +103,7 @@ export default function ResearchCard() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-4 py-2 bg-[#0f1240] text-white rounded-lg hover:bg-[#1a1f5c] disabled:opacity-50"
+                  className="px-4 py-2 bg-[#0a0b1e]/90 text-white rounded-lg hover:bg-[#0a0b1e] disabled:opacity-50"
                 >
                   {isSubmitting ? 'Processing...' : 'Download'}
                 </button>
