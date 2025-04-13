@@ -76,31 +76,31 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-1 pt-2 pb-3 space-y-1">
               <Link
                 href="/"
-                className="block px-3 py-2 text-[#cececf] hover:text-white hover:bg-blue-500/10 rounded-md"
+                className="block pl-4 py-2 text-[#cececf] hover:text-white hover:bg-blue-500/10 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="block px-3 py-2 text-[#cececf] hover:text-white hover:bg-blue-500/10 rounded-md"
+                className="block pl-4 py-2 text-[#cececf] hover:text-white hover:bg-blue-500/10 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link
                 href="/research"
-                className="block px-3 py-2 text-[#cececf] hover:text-white hover:bg-blue-500/10 rounded-md"
+                className="block pl-4 py-2 text-[#cececf] hover:text-white hover:bg-blue-500/10 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Research
               </Link>
               <Link
                 href="/contact"
-                className="block px-3 py-2 text-[#cececf] hover:text-white hover:bg-blue-500/10 rounded-md"
+                className="block pl-4 py-2 text-[#cececf] hover:text-white hover:bg-blue-500/10 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
