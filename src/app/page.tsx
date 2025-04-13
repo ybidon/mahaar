@@ -87,7 +87,7 @@ export default function Home() {
       </div>
       <CountriesTable />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12 px-4 mt-16 md:mt-24">
+      <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12 px-4 mt-16 md:mt-24">
         <Link href="/about" className="group">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
             <h2 className="text-lg md:text-xl font-semibold mb-2">About Us</h2>
