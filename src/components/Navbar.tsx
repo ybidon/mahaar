@@ -31,16 +31,16 @@ export default function Navbar() {
               Home
             </Link>
             <Link 
-              href="/research" 
-              className="text-[#cececf] hover:text-white transition-colors duration-200"
-            >
-              Research
-            </Link>
-            <Link 
               href="/about" 
               className="text-[#cececf] hover:text-white transition-colors duration-200"
             >
               About
+            </Link>
+            <Link 
+              href="/research" 
+              className="text-[#cececf] hover:text-white transition-colors duration-200"
+            >
+              Research
             </Link>
             <Link 
               href="/contact" 
