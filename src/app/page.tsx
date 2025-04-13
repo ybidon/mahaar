@@ -123,6 +123,9 @@ export default function Home() {
           Contact Us
         </Link>
       </section>
+
+      {/* Add space for footer navbar */}
+      <div className="h-16 md:block hidden"></div>
     </div>
   );
 }
