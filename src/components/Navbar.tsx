@@ -17,7 +17,7 @@ export default function Navbar() {
               alt="MAHAAR Logo"
               width={220}
               height={110}
-              className="object-contain mt-10 -ml-8"
+              className="object-contain mt-10 -ml-12 md:-ml-8"
               priority
             />
           </Link>
