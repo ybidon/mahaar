@@ -15,7 +15,18 @@ export default function ResearchPage() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ResearchCard />
+          <ResearchCard 
+            title="Bitcoin: A Peer-to-Peer Electronic Cash System"
+            description="The original Bitcoin whitepaper by Satoshi Nakamoto, introducing the first decentralized digital currency and blockchain technology."
+            publishDate="October 2008"
+            pdfPath="/bitcoin.pdf"
+          />
+          <ResearchCard 
+            title="MicroStrategy - The American Pioneer"
+            description="An analysis of MicroStrategy's pioneering approach to corporate Bitcoin treasury management and its impact on the institutional adoption of Bitcoin."
+            publishDate="March 2024"
+            pdfPath="/MicroStrategy - The American Pioneer.pdf"
+          />
           {/* Add more research cards here */}
         </div>
       </div>
