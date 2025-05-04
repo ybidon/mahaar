@@ -23,8 +23,8 @@ export default function ResearchPage() {
           />
           <ResearchCard 
             title="MicroStrategy - The American Pioneer"
-            description="An analysis of MicroStrategy's pioneering approach to corporate Bitcoin treasury management and its impact on the institutional adoption of Bitcoin."
-            publishDate="March 2024"
+            description="An analysis of MicroStrategy's pioneering approach to corporate Bitcoin treasury management"
+            publishDate="April 2024"
             pdfPath="/MicroStrategy - The American Pioneer.pdf"
           />
           {/* Add more research cards here */}

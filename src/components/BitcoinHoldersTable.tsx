@@ -88,19 +88,19 @@ export default function BitcoinHoldersTable() {
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Company</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bitcoin Holdings</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Value (USD)</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">% of Treasury</th>
+              <th className="px-6 py-3 text-left text-xs font-medium !text-gray-500 uppercase tracking-wider">Company</th>
+              <th className="px-6 py-3 text-left text-xs font-medium !text-gray-500 uppercase tracking-wider">Bitcoin Holdings</th>
+              <th className="px-6 py-3 text-left text-xs font-medium !text-gray-500 uppercase tracking-wider">Value (USD)</th>
+              <th className="px-6 py-3 text-left text-xs font-medium !text-gray-500 uppercase tracking-wider">% of Treasury</th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {holders.map((holder) => (
               <tr key={holder.entity} className="hover:bg-gray-50">
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{holder.entity}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{holder.btc.toLocaleString()}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{holder.value}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{holder.percentage}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium !text-gray-900">{holder.entity}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm !text-gray-900">{holder.btc.toLocaleString()}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm !text-gray-900">{holder.value}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm !text-gray-900">{holder.percentage}</td>
               </tr>
             ))}
           </tbody>

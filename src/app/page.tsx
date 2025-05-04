@@ -51,23 +51,23 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Our Services</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 !text-gray-900">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">Strategy Development</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 !text-gray-900">Strategy Development</h3>
+              <p className="!text-gray-600">
                 Custom Bitcoin treasury strategies tailored to your business needs
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">Implementation</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 !text-gray-900">Implementation</h3>
+              <p className="!text-gray-600">
                 Seamless integration into a network of brokers, liquidity providers and OTC desks
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">Risk Management</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 !text-gray-900">Risk Management</h3>
+              <p className="!text-gray-600">
                 Comprehensive risk assessment and mitigation strategies
               </p>
             </div>
@@ -76,14 +76,14 @@ export default function Home() {
       </section>
 
       <div className="mb-6 md:mb-8 px-4 text-center">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-900">Top Bitcoin Holders Amongst Public Companies</h2>
-        <p className="text-sm text-gray-500 mt-1">As of 03/2025</p>
+        <h2 className="text-xl md:text-2xl font-bold !text-gray-900">Top Bitcoin Holders Amongst Public Companies</h2>
+        <p className="text-sm !text-gray-500 mt-1">As of 03/2025</p>
       </div>
       <BitcoinHoldersTable />
       
       <div className="mt-12 md:mt-16 mb-6 md:mb-8 px-4 text-center">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-900">Top Bitcoin Holders Amongst Countries</h2>
-        <p className="text-sm text-gray-500 mt-1">As of 03/2025</p>
+        <h2 className="text-xl md:text-2xl font-bold !text-gray-900">Top Bitcoin Holders Amongst Countries</h2>
+        <p className="text-sm !text-gray-500 mt-1">As of 03/2025</p>
       </div>
       <CountriesTable />
 
@@ -91,19 +91,19 @@ export default function Home() {
         <Link href="/about" className="group">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
             <h2 className="text-lg md:text-xl font-semibold mb-2">About Us</h2>
-            <p className="text-gray-600">Learn about our mission and values</p>
+            <p className="!text-gray-600">Learn about our mission and values</p>
           </div>
         </Link>
         <Link href="/research" className="group">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
             <h2 className="text-lg md:text-xl font-semibold mb-2">Research</h2>
-            <p className="text-gray-600">Explore our latest insights and analysis</p>
+            <p className="!text-gray-600">Explore our latest insights and analysis</p>
           </div>
         </Link>
         <Link href="/contact" className="group">
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
             <h2 className="text-lg md:text-xl font-semibold mb-2">Contact</h2>
-            <p className="text-gray-600">Get in touch with our team</p>
+            <p className="!text-gray-600">Get in touch with our team</p>
           </div>
         </Link>
       </div>
