@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import FooterNavbar from '@/components/FooterNavbar';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,6 +46,7 @@ export default function RootLayout({
         <Navbar />
         <main className="pt-16">{children}</main>
         <FooterNavbar />
+        <Analytics />
       </body>
     </html>
   );
