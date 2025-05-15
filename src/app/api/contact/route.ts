@@ -6,6 +6,14 @@ export async function POST(request: Request) {
     const { name, email, company, message } = await request.json();
     console.log('Received email request:', { name, email, company, message });
 
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      console.error('Missing email credentials:', {
+        hasUser: !!process.env.EMAIL_USER,
+        hasPass: !!process.env.EMAIL_PASS
+      });
+      throw new Error('Email configuration is missing');
+    }
+
     // Create a transporter using Gmail
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -18,7 +26,7 @@ export async function POST(request: Request) {
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+      to: 'contact@mahaarsolutions.com', // Hardcoded recipient
       subject: `New PDF Download Request from ${email}`,
       text: `
 Name: ${name}
@@ -40,11 +48,17 @@ ${message}
 
     // Send email
     const info = await transporter.sendMail(mailOptions);
-    console.log('Email sent:', info);
+    console.log('Email sent successfully:', info);
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Detailed email error:', error);
+    // Log the full error object
+    if (error instanceof Error) {
+      console.error('Error name:', error.name);
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
+    }
     return NextResponse.json(
       { error: error instanceof Error ? error.message : 'Failed to send message' },
       { status: 500 }
