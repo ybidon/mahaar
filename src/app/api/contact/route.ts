@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'contact@mahaarsolutions.com', // Hardcoded recipient
+      to: 'contact@mahaarsolutions.com',
       subject: `New PDF Download Request from ${email}`,
       text: `
 Name: ${name}
