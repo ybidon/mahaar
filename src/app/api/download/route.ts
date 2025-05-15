@@ -27,8 +27,13 @@ export async function POST(request: Request) {
     // Read the file
     const fileBuffer = fs.readFileSync(absolutePath);
 
+    // Get the base URL for API calls
+    const baseUrl = process.env.VERCEL_URL 
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000';
+
     // Send email notification in the background
-    fetch('/api/contact', {
+    fetch(`${baseUrl}/api/contact`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
