@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
@@ -27,24 +28,41 @@ export async function POST(request: Request) {
     // Read the file
     const fileBuffer = fs.readFileSync(absolutePath);
 
-    // Get the base URL for API calls
-    const baseUrl = process.env.VERCEL_URL 
-      ? `https://${process.env.VERCEL_URL}`
-      : 'http://localhost:3000';
+    // Send email notification
+    try {
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS,
+        },
+      });
 
-    // Send email notification in the background
-    fetch(`${baseUrl}/api/contact`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: 'PDF Downloader',
-        email: email,
-        company: 'PDF Download',
-        message: `New PDF download request for ${pdfPath} from: ${email}`,
-      }),
-    }).catch(console.error);
+      await transporter.sendMail({
+        from: process.env.EMAIL_USER,
+        to: 'contact@mahaarsolutions.com',
+        subject: `New PDF Download Request from ${email}`,
+        text: `
+Name: PDF Downloader
+Email: ${email}
+Company: PDF Download
+
+Message:
+New PDF download request for ${pdfPath} from: ${email}
+        `,
+        html: `
+<h2>New PDF Download Request</h2>
+<p><strong>Name:</strong> PDF Downloader</p>
+<p><strong>Email:</strong> ${email}</p>
+<p><strong>Company:</strong> PDF Download</p>
+<p><strong>Message:</strong></p>
+<p>New PDF download request for ${pdfPath} from: ${email}</p>
+        `,
+      });
+    } catch (emailError) {
+      console.error('Failed to send email notification:', emailError);
+      // Continue with download even if email fails
+    }
 
     // Return the PDF file
     return new NextResponse(fileBuffer, {
