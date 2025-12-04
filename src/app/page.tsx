@@ -77,13 +77,13 @@ export default function Home() {
 
       <div className="mb-6 md:mb-8 px-4 text-center">
         <h2 className="text-xl md:text-2xl font-bold !text-gray-900">Top Bitcoin Holders Amongst Public Companies</h2>
-        <p className="text-sm !text-gray-500 mt-1">As of 03/2025</p>
+        <p className="text-sm !text-gray-500 mt-1">As of 12/2025</p>
       </div>
       <BitcoinHoldersTable />
       
       <div className="mt-12 md:mt-16 mb-6 md:mb-8 px-4 text-center">
         <h2 className="text-xl md:text-2xl font-bold !text-gray-900">Top Bitcoin Holders Amongst Countries</h2>
-        <p className="text-sm !text-gray-500 mt-1">As of 03/2025</p>
+        <p className="text-sm !text-gray-500 mt-1">As of 12/2025</p>
       </div>
       <CountriesTable />
 

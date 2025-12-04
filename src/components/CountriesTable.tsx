@@ -13,58 +13,50 @@ const countries: CountryBitcoinHolder[] = [
   {
     country: 'USA',
     flag: 'us',
-    sources: 'News',
-    BTC: 207189,
-    value: 17540687040,
-    percentage: 0.987
+    sources: 'Filing',
+    BTC: 198012,
+    value: 18470000000,
+    percentage: 0.943
   },
   {
     country: 'China',
     flag: 'cn',
-    sources: 'News',
+    sources: '',
     BTC: 194000,
-    value: 16424102080,
+    value: 18100000000,
     percentage: 0.924
   },
   {
     country: 'UK',
     flag: 'gb',
-    sources: 'News',
-    BTC: 61000,
-    value: 5164279520,
-    percentage: 0.29
+    sources: 'Filing',
+    BTC: 61245,
+    value: 5710000000,
+    percentage: 0.292
   },
   {
     country: 'Ukraine',
     flag: 'ua',
-    sources: 'News',
+    sources: '',
     BTC: 46351,
-    value: 3924090492,
+    value: 4320000000,
     percentage: 0.221
   },
   {
     country: 'Bhutan',
     flag: 'bt',
-    sources: 'News',
-    BTC: 13029,
-    value: 1103039309,
-    percentage: 0.062
+    sources: '',
+    BTC: 11286,
+    value: 1050000000,
+    percentage: 0.054
   },
   {
     country: 'El Salvador',
     flag: 'sv',
-    sources: 'Filing | News',
-    BTC: 6089,
-    value: 515496688,
-    percentage: 0.029
-  },
-  {
-    country: 'Finland',
-    flag: 'fi',
-    sources: 'News',
-    BTC: 1981,
-    value: 167712093,
-    percentage: 0.009
+    sources: 'Filing',
+    BTC: 7475.4,
+    value: 697330000,
+    percentage: 0.036
   }
 ];
 
@@ -85,9 +77,13 @@ export default function CountriesTable() {
             {countries.map((country) => (
               <tr key={country.country} className="hover:bg-gray-50">
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium !text-gray-900">{country.country}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm !text-gray-900">{country.BTC.toLocaleString()}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm !text-gray-900">${(country.value / 1000000000).toFixed(2)}B</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm !text-gray-900">{country.percentage}%</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm !text-gray-900">{country.BTC.toLocaleString('en-US', { maximumFractionDigits: 1 })}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm !text-gray-900">
+                  {country.value >= 1000000000 
+                    ? `$${(country.value / 1000000000).toFixed(2)} B`
+                    : `$${(country.value / 1000000).toFixed(2)} M`}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm !text-gray-900">{country.percentage.toFixed(3)}%</td>
               </tr>
             ))}
           </tbody>
